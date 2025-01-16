@@ -1,4 +1,5 @@
 import React,{useState} from 'react';
+import TodoModal from './TodoModal';
 
 
 type Todo = { //타입 사용이유 : 기존타입을 기반으로 새로운 타입을 만들때 사용
@@ -87,6 +88,7 @@ const TodoList: React.FC/*리액트에서 함수형 컴포넌트 정의*/ = () =
                     </ul>
                 </div>
             </div>
+            <TodoModal show = {showDetail} todo={selectedTodo} handleClose={handleCloseDetail} ></TodoModal>
         </div>
     );
 }
